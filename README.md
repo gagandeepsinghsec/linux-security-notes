@@ -22,4 +22,8 @@ Documenting my hands-on journey in Cloud Security & DevSecOps.
 - Issue: Linux spaces ko alag arguments maanta hai.
 - Commands Learned:
   - cat "spaces in this filename" (Use double quotes)
-  - Alternatively: cat spaces\ in\ this\ filename (Use backslash \ to escape spaces)
+  - Alternatively: cat spaces\ in\ this\ filename (Use backslash \ to escape spaces)## Computer Networks
+
+### Day 0 - What is a Network?
+- Traffic Flow: Client -> Local Switch/Router -> Firewall -> Web Server.
+- Key Concept: Internet par data packets ke roop me travel karta hai aur server tak pahunchne se pehle firewall security inspect karti hai.
