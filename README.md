@@ -30,4 +30,14 @@ Documenting my hands-on journey in Cloud Security & DevSecOps.
 
 - Level 2 -> 3 (Handling Spaces & Dashes): File names with dashes/spaces confuse terminal flags. Solved using cat ./* or cat ./"--filename--".
 - Level 3 -> 4 (Hidden Files): Files starting with . are hidden from normal ls. Listed using ls -la and read via cat ./...Hiding-From-You.
-- Level 4 -> 5 (Identifying File Types): Directory had multiple binary files and only one human-readable file. Inspected formats using file ./* and extracted password from the ASCII text file using cat ./-file07.
+- Level 4 -> 5 (Identifying File Types): Directory had multiple binary files and only one human-readable file. Inspected formats using file ./* and extracted password from the ASCII text file using cat ./-file07.## Day 1: Networking & Advanced CLI (Bandit 5 - 7)
+
+### 1. Networking Basics (Switch vs Hub)
+- Hub: Layer 1 device. Dumb broadcaster; har port par aane wale packet ko baaki sabhi ports par flood karta hai (causes collisions and security risk).
+- Switch: Layer 2 intelligent device. MAC Address table build karta hai aur frame ko sirf intended destination device par forward karta hai.
+- ARP (Address Resolution Protocol): IP address ko physical MAC address me map karta hai (arp -a local machine par dekhne ke liye).
+
+### 2. Linux Bandit Walkthrough
+- **Level 5 -> 6 (find command):** Searched nested directories for human-readable, non-executable files with exact 1033 bytes:
+  `bash
+  find . -type f -size 1033c ! -executable
